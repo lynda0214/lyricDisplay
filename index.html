@@ -38,6 +38,7 @@
 
     <div id="lyrics">
         <div id="progress" style=" height: 5px; width: 0%; background-color:goldenrod; "></div>
+        <div id="progress_withinSong" style=" height: 5px; width: 0%; background-color:forestgreen "></div>
         <div style="width:100%;">
             <span id="lastSong" style="display:inline-block; text-align:center; color: #555555; width:33%"></span>
             <span id="currentSong" style="display:inline-block; text-align:center; color: #555555; width:33%"></span>
@@ -100,7 +101,6 @@
             if (lyricIndex > 0) lyricIndex--;
             updateText();
         } else if (keycode == 39) { // right (next line of lyric)
-
             $('#opening').hide();
             state = 1;
             if (lyricIndex < arr[fileIndex].length - 2) lyricIndex++; // cause there's always a line change automatically added to the last line
@@ -118,7 +118,6 @@
             $('h2').toggle();
         }
 
-
         var currentLines = 0;
         for (var i = 0; i < fileIndex; i++) {
             currentLines += arr[i].length;
@@ -126,7 +125,7 @@
         currentLines += (lyricIndex);
         console.log(currentLines);
         document.getElementById('progress').style.width = (currentLines / totalLines) * 100 + '%';
-
+        document.getElementById('progress_withinSong').style.width = (lyricIndex / (arr[fileIndex].length - 2)) * 100 + '%';
     });
 
     var lights = [];
