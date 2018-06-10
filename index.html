@@ -107,7 +107,7 @@
             if (lyricIndex > 0) lyricIndex--;
             updateText();
         } else if (keycode == 39) { // right (next line of lyric)
-            $('#opening').hide();
+            //$('#opening').hide();
             state = 1;
             if (lyricIndex < arr[fileIndex].length - 2) lyricIndex++; // cause there's always a line change automatically added to the last line
             updateText();
@@ -122,6 +122,8 @@
         } else if (keycode == 32) { // space (blank page)
             $('h1').toggle();
             $('h2').toggle();
+        } else if (keycode == 79) {
+            $('#opening').toggle();
         }
 
         var currentLines = 0;
