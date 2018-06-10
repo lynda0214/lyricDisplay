@@ -29,6 +29,7 @@ There are 5 instinct commands for you:
 * **[RIGHT] Next Line** go to the next line of lyrics of current song. Useful  all the way from a to z. 
 * **[UP] Last Song** go back to last song. Useful when you are not on the same page of the show. 
 * **[DOWN] Next Song** go to the next song. Useful when you finish the lines of current song. 
+* **[O] Toggle Count Down Page** toggle the count down page, which is defaultly turned on. 
 
 Uplaod file should follows: 
 
