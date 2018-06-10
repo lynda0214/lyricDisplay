@@ -88,7 +88,7 @@
         $.get(file, function (s) {
             console.log(s);
             arr[i] = s.split('\n');
-            totalLines += arr[i].length - 1;
+            totalLines += arr[i].length;
         });
     });
 
